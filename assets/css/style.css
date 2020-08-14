@@ -1,0 +1,257 @@
+/* reset CSS */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+  background-image: url(../images/matsuri.jpg);
+  background-size:100% auto;
+  background-repeat:no-repeat;
+  padding-top: 300px;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ここから */
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+.title {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.shibajuku {
+  margin-bottom: 20px;
+}
+
+
+.btn_group {
+  margin: 0 auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 1000px;
+}
+
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 2rem;
+  border-radius: 10px;
+  font-size: 2rem;
+  border:none;
+}
+
+.start_btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 400px;
+  background-color: rgb(255, 214, 79);
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  color:#333;
+}
+
+.start_btn:hover {
+  background-color: rgb(248, 199, 52);
+}
+
+
+
+
+.share_btn {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+  background-color: #1da0f2;
+  text-align: center;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  text-decoration: none;
+  color: #fff;
+  width: 400px;
+  display: none;
+}
+
+.share_btn:hover {
+  background-color: #1585ca;
+}
+
+
+
+.fireworks_btn {
+  display: inline-block;
+  text-decoration: none;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  text-align: center;
+  background-image: url(../images/taiko.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size:110px;
+  background-color: rgb(255, 229, 196);
+  -webkit-box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+          box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+  border:4px solid rgb(134, 86, 23);
+  outline: none;
+  cursor: pointer;
+}
+
+.fireworks_btn:hover {
+  opacity: 0.7;
+}
+
+.fireworks_btn:focus {
+  -webkit-box-shadow: 0 0 7px rgba(0, 0 ,0);
+          box-shadow: 0 0 7px rgba(0, 0 ,0);
+}
+
+.fireworks_btn:active {
+  /*押したとき*/
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+  border-bottom: none;
+}
+
+.window {
+  position: relative;
+  width: 1000px;
+  height: 800px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+
+.p5Canvas {
+  padding: 30px;
+  position: relative;
+  z-index: 0;
+  width: 1000px;
+  height: 800px;
+  margin: auto;
+}
+
+
+
+.window:before{
+background: repeating-linear-gradient(-45deg, #ff0026, #ff0026 15px, #fcf0f1 0, #fcf0f1 30px);
+content: '';
+position: absolute;
+top: 0px;
+bottom: 0px;
+left: 0px;
+right: 0px;
+z-index: -2;
+border-radius: 10px;
+}
+
+.window:after{
+background-color: #000;
+content: '';
+position: absolute;
+top: 30px;
+bottom: 30px;
+left: 30px;
+right: 30px;
+z-index: -1;
+}
+
+.memo {
+  margin: 50px auto 100px auto;
+  font-size: 2rem;
+  text-align: center;
+  padding: 2rem;
+  background-color: rgb(57, 65, 167);
+  background-image: url(../images/hana.png);
+  background-size: 30px 30px;
+  color: #fff;
+  width: 1000px;
+  border-radius: 10px;
+}
+
+.footer {
+  padding: 2rem;
+  background-color: #1C278D;
+  color: #fff;
+  text-align: center;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*  Screen Reader Text  */
+.screen-reader-text {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+}
